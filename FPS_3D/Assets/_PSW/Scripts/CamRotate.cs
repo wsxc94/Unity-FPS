@@ -13,6 +13,10 @@ public class CamRotate : MonoBehaviour
     void Update()
     {
         //카메라 회전
+        //Rotate();
+    }
+    private void LateUpdate()
+    {
         Rotate();
     }
 
