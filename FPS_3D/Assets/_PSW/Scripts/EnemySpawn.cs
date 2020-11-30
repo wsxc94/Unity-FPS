@@ -15,12 +15,11 @@ public class EnemySpawn : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        //while (true)
-        //{
+        
             GameObject enemy = Instantiate(enemyFactory, spawnPoint.transform.position, Quaternion.identity);
-            
-           yield return new WaitForSeconds(3f);
-        //}
+
+            yield return new WaitForSeconds(3f);
+        
 
     }
 }

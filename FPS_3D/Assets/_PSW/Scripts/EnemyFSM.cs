@@ -188,7 +188,6 @@ public class EnemyFSM : MonoBehaviour
 
     public void RayCastHit(float damage , Vector3 hitPoint)
     {
-        print("hit");
 
         hp -= damage;
 
@@ -205,5 +204,9 @@ public class EnemyFSM : MonoBehaviour
             animator.SetTrigger("Damage");
         }
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
 
+    }
 }
