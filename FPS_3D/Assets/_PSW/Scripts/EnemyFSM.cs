@@ -189,8 +189,6 @@ public class EnemyFSM : MonoBehaviour
     public void RayCastHit(float damage , Vector3 hitPoint)
     {
 
-        hp -= damage;
-
         if(hp <= 0)
         {
             state = EnemyState.Die;
@@ -200,6 +198,7 @@ public class EnemyFSM : MonoBehaviour
         }
         else
         {
+            hp -= damage;
             state = EnemyState.Damaged;
             animator.SetTrigger("Damage");
         }
